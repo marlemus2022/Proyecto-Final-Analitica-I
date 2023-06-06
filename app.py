@@ -208,7 +208,7 @@ fig.update_layout(
             y=1.02,
             xanchor="right",
             x=1.5))
-fig.update_layout(width=1700, height=650)  # Ajusta el tamaño del gráfico
+fig.update_layout(width=1400, height=550)  # Ajusta el tamaño del gráfico
 
 st.plotly_chart(fig)
 
