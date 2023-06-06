@@ -471,14 +471,15 @@ c15.markdown("<h5 style='text-align: center; color: #930000;'>Porcentaje de ince
 
 st.write(AH)
 st.write(AH.columns)
-conteo_eventos = AH['performance_of_system'].value_counts()
+#conteo_eventos = AH['performance_of_system'].value_counts()
+AH=AH.rename(columns={'Performance of smoke alarm device, residential fires':'performance_of_system'})
 conteo_performance = AH['performance_of_system'].value_counts()
 incendios_con_alarma = conteo_performance['Alarm activated']
 incendios_sin_alarma = total_incendios - incendios_con_alarma
 data = {'Resultado': ['Alarmas Activadas', 'Alarmas No Activadas'],'Cantidad': [incendios_con_alarma, incendios_sin_alarma]}
 
 df = pd.DataFrame(data)
-
+st.write(df)
 figah = px.pie(df, values='Cantidad', names='Resultado',
                width=350, height=300)
 
