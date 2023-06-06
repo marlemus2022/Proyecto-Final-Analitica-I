@@ -203,7 +203,7 @@ fig.update_layout(
        legend_title_text='',
         
      legend=dict(
-           orientation="v",
+           orientation="h",
             yanchor="bottom",
             y=1.02,
             xanchor="right",
