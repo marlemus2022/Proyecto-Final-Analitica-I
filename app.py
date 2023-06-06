@@ -469,6 +469,7 @@ c14.image(imageROC, caption="Rociadores. Tomado de: https://media.istockphoto.co
 
 c15.markdown("<h5 style='text-align: center; color: #930000;'>Porcentaje de incendios en los que funcionaron efectivamente  las alarmas de humo</h5>", unsafe_allow_html=True)
 
+st.write(AH)
 st.write(AH.columns)
 conteo_eventos = AH['performance_of_system'].value_counts()
 conteo_performance = AH['performance_of_system'].value_counts()
