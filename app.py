@@ -432,6 +432,7 @@ c14.markdown("<h5 style='text-align: center; color: #930000;'>Porcentaje de ince
 
 
 st.write(ROC)
+st.write(ROC.columns)
 conteo_performance = ROC['performance_of_system'].value_counts()
 incendios_con_rociadores = conteo_performance['Sprinkler operated']
 total_incendios = ROC.shape[0]
