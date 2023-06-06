@@ -199,7 +199,7 @@ fig.update_layout(
         plot_bgcolor='rgba(0,0,0,0)',
        template = 'simple_white',
        xaxis_title="<b>Año<b>",
-       yaxis_title='<b>Cantidad de incidentes<b>',
+       yaxis_title='<b>Cantidad de muertes<b>',
        legend_title_text='',
         
      legend=dict(
@@ -208,7 +208,7 @@ fig.update_layout(
             y=1.02,
             xanchor="right",
             x=1.5))
-fig.update_layout(width=1000, height=450)  # Ajusta el tamaño del gráfico
+fig.update_layout(width=1700, height=650)  # Ajusta el tamaño del gráfico
 
 st.plotly_chart(fig)
 
