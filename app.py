@@ -192,7 +192,7 @@ datos_filtrados = datos_filtrados.dropna(subset=['FATALITIES'])
 muertes_por_anio = datos_filtrados.groupby(['YEAR' ,'EVENT TYPE'])['FATALITIES'].sum().reset_index()
 
 # Generar gráfica
-fig = px.line(muertes_por_anio, x='YEAR', y='FATALITIES', color = 'EVENT TYPE', width=650, height=450)
+fig = px.line(muertes_por_anio, x='YEAR', y='FATALITIES', color = 'EVENT TYPE', width=1400, height=550)
 # Editar gráfica
 fig.update_layout(
         paper_bgcolor='rgba(0,0,0,0)',
@@ -203,12 +203,12 @@ fig.update_layout(
        legend_title_text='',
         
      legend=dict(
-           orientation="h",
-            yanchor="top",
-            y=5.0,
+           orientation="v",
+            yanchor="bottom",
+            y=1.5,
             xanchor="center",
             x=2.0))
-fig.update_layout(width=1400, height=550)  # Ajusta el tamaño del gráfico
+
 
 st.plotly_chart(fig)
 
