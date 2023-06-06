@@ -431,8 +431,7 @@ c14, c15= st.columns((1,1))
 c14.markdown("<h5 style='text-align: center; color: #930000;'>Porcentaje de incendios en los que funcionaron efectivamente los rociadores</h5>", unsafe_allow_html=True)
 
 
-st.write(ROC)
-st.write(ROC.columns)
+
 ROC=ROC.rename(columns={'Performance of sprinkler system, structural fires':'performance_of_system'})
 conteo_performance = ROC['performance_of_system'].value_counts()
 incendios_con_rociadores = conteo_performance['Sprinkler operated']
@@ -457,7 +456,7 @@ figrr.update_layout(template = 'simple_white',
 
 c14.plotly_chart(figrr)
 ###
-c14.markdown("<h6 style='text-align: center; color: #525252;'>El porcentaje o tasa de efectividad  de funcionamiento de los rociadores es del 20%.</h6>", unsafe_allow_html=True)
+c14.markdown("<h6 style='text-align: left; color: #525252;'>El porcentaje o tasa de efectividad  de funcionamiento de los rociadores es del 20%.</h6>", unsafe_allow_html=True)
 
 imageROC= "rociador.jpg"
 c14.image(imageROC, caption="Rociadores. Tomado de: https://media.istockphoto.com/id/1016220060/es/foto/alarma-de-incendio-sistema-de-rociadores-en-acci%C3%B3n-con-humo.jpg?s=612x612&w=0&k=20&c=hErBxB7JBNuUltFiSuYHL0_sBs-OwuO6RABS4YzTfNQ=", width=470, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
@@ -470,6 +469,7 @@ c14.image(imageROC, caption="Rociadores. Tomado de: https://media.istockphoto.co
 
 c15.markdown("<h5 style='text-align: center; color: #930000;'>Porcentaje de incendios en los que funcionaron efectivamente  las alarmas de humo</h5>", unsafe_allow_html=True)
 
+st.write(AH.columns)
 conteo_eventos = AH['performance_of_system'].value_counts()
 conteo_performance = AH['performance_of_system'].value_counts()
 incendios_con_alarma = conteo_performance['Alarm activated']
