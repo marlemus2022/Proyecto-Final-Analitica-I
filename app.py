@@ -431,6 +431,7 @@ c14, c15= st.columns((1,1))
 c14.markdown("<h5 style='text-align: center; color: #930000;'>Porcentaje de incendios en los que funcionaron efectivamente los rociadores</h5>", unsafe_allow_html=True)
 
 
+st.write(ROC)
 conteo_performance = ROC['performance_of_system'].value_counts()
 incendios_con_rociadores = conteo_performance['Sprinkler operated']
 total_incendios = ROC.shape[0]
