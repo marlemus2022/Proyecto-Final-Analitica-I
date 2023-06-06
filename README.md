@@ -1,5 +1,6 @@
 # Proyecto Final Analitica I
 Proyecto Final para el curso de Analitica I de la Universidad de Antioquia.  Este proyecto analiza las estadisticas de ocurrencia de desastres en Canada, ocupandose principalmente de la caracterización estadistica de los incendios.  
+
 Este trabajo de investigación examina la eficacia de los sistemas de prevención de incendios en Canadá, centrándose en los detectores de humo y los sistemas de rociadores en incidentes de incendios estructurales. El estudio analiza los datos disponibles en las bases de datos abiertas para proporcionar información sobre el impacto de estos sistemas en la mitigación de los daños causados por los incendios. Además, se contextualiza el panorama general de desastres en Canadá, incluyendo incendios forestales y otros tipos de desastres, para comprender mejor la magnitud y la importancia de las medidas de prevención de incendios. El objetivo final es brindar conocimientos basados en evidencia que contribuyan a mejorar las regulaciones y las estrategias de seguridad contra incendios en el país.
 
 Data Analyst Project
