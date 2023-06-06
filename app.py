@@ -178,7 +178,8 @@ st.markdown("<hr>", unsafe_allow_html=True)
 
 #Ahora graficamos la evolucion de las muertes por año para cada tipo de desastre (top 3)
 st.markdown("<h4 style='text-align: center; color: #930000;'>Evolución de las muertes causadas por los tres tipos de desastres mas comunes</h4>", unsafe_allow_html=True)
- 
+
+eventos = ['fire', 'storm', 'flood'] 
 filtro_eventos = DESA['EVENT TYPE'].isin(eventos)
 datos_filtrados = DESA[filtro_eventos]
 
