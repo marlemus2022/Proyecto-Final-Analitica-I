@@ -204,10 +204,10 @@ fig.update_layout(
         
      legend=dict(
            orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="right",
-            x=1.5))
+            yanchor="top",
+            y=5.0,
+            xanchor="center",
+            x=2.0))
 fig.update_layout(width=1400, height=550)  # Ajusta el tamaño del gráfico
 
 st.plotly_chart(fig)
