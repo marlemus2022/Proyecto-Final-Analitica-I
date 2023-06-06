@@ -430,17 +430,13 @@ c14, c15= st.columns((1,1))
 
 c14.markdown("<h5 style='text-align: center; color: #930000;'>Porcentaje de incendios en los que funcionaron efectivamente los rociadores</h5>", unsafe_allow_html=True)
 
-conteo_eventos = ROC['performance_of_system'].value_counts()
 
 conteo_performance = ROC['performance_of_system'].value_counts()
 incendios_con_rociadores = conteo_performance['Sprinkler operated']
 total_incendios = ROC.shape[0]
 porcentaje_efectividad = (incendios_con_rociadores / total_incendios) * 100
-
-conteo_performance = ROC['performance_of_system'].value_counts()
-incendios_con_rociadores = conteo_performance['Sprinkler operated']
 incendios_sin_rociadores = total_incendios - incendios_con_rociadores
-data = {'Resultado': ['No funcionaron', 'Si funcionaron'],'Cantidad': [incendios_con_rociadores, incendios_sin_rociadores]}
+data = {'Resultado': ['Si funcionarón', 'No funcionarón'],'Cantidad': [incendios_con_rociadores, incendios_sin_rociadores]}
 
 df = pd.DataFrame(data)
 
@@ -455,9 +451,6 @@ figrr.update_layout(template = 'simple_white',
                               y=-0.4,
                               xanchor="center",
                               x=0.5))
-
-
-
 
 c14.plotly_chart(figrr)
 ###
