@@ -328,7 +328,7 @@ incendios_muertos = incendios.groupby('YEAR')['FATALITIES'].count()
 tasa_mortalidad = round(((incendios_muertos / total_incendios)*100),2)
 tasa_mortalidad_df = pd.DataFrame({'YEAR': tasa_mortalidad.index, 'tasa de Mortalidad (%)': tasa_mortalidad.values})
 #figm = px.bar(tasa_mortalidad_df, x='YEAR', y='tasa de Mortalidad (%)', labels={'Año': 'Año', 'tasa_mortalidad_df': 'tasa de Mortalidad (%)'}, width=500, height=400)
-figm = px.line(tasa_mortalidad_df, x='YEAR', y='tasa de Mortalidad (%)', width=600, height=400, title="Tasa de mortalidad por año)
+figm = px.line(tasa_mortalidad_df, x='YEAR', y='tasa de Mortalidad (%)', width=600, height=400, title="Tasa de mortalidad por año")
 
                #Editar gráfica
 figm.update_layout(
